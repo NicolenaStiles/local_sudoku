@@ -19,3 +19,5 @@ class GridModel(object):
     def __init__(self, grid=[]):
         if self.grid==[]:
             print("Generating a random Sudoku puzzle...")
+        else:
+            print("Loading your puzzle...")

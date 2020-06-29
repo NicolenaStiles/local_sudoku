@@ -4,7 +4,35 @@
 # Created by Nicolena Stiles
 # 06/23/2020
 
-# Grid = 2-D array to initalize grid view object with.
-class GridView(object):
+from sudokuGridModel import GridModel
 
-    def __init__ (self):
+'''
+GRAPHIC REFERENCES:
+
+5 tall
+7 wide
+
+   ██     ██████      ██████      ██   ██     ███████      ██████      ███████      █████       █████ 
+  ███          ██          ██     ██   ██     ██          ██                ██     ██   ██     ██   ██ 
+   ██      █████       █████      ███████     ███████     ███████          ██       █████       ██████ 
+   ██     ██               ██          ██          ██     ██    ██        ██       ██   ██          ██ 
+   ██     ███████     ██████           ██     ███████      ██████         ██        █████       █████       
+
+
+||=========||===========||===========||
+|| {} {} {}|| x   x   x || x   x   x ||
+|| {} {} {}|| x   x   x || x   x   x ||
+|| {} {} {}|| x   x   x || x   x   x ||
+||=========||===========||===========||
+|| x   x   x || x   x   x || x   x   x ||
+|| x   x   x || x   x   x || x   x   x ||
+|| x   x   x || x   x   x || x   x   x ||
+||===========||===========||===========||
+|| x   x   x || x   x   x || x   x   x ||
+|| x   x   x || x   x   x || x   x   x ||
+|| x   x   x || x   x   x || x   x   x ||
+||===========||===========||===========||
+
+'''
+
+def printGrid(grid):
