@@ -156,19 +156,28 @@ if __name__ == '__main__':
     TEXT_HEIGHT = 4
     TEXT_WIDTH = 6
 
-    # test array values
-    puzzle_input = 
+    # Build "golden sudoku" puzzle
+    puzzle_input = []
+    offset = 0
+    for n in range (0,9):
+        row = []
+        for m in range(0,9):
+                row.append(m)
+        puzzle_input.append(row)
+
+    print(puzzle_input)
+
+
+    #for i in range(0,GRID_HEIGHT):
+        #print('||{}|{}|{}||{}|{}|{}||{}|{}|{}||'.format(*test_array))
 
     text_array = [text_1,text_2,text_3,text_4,text_5,
                     text_6, text_7, text_8, text_9]
 
-    for nums in range(0,9):
-        print()
-        for h in range(0, 5):
-            print(text_array[nums][h])
+    #for nums in range(0,9):
+        #print()
+        #for h in range(0, 5):
+            #print(text_array[nums][h])
 
 #    for q in range (0,9):
 #       print(test_array[q])
-
-#    for i in range(0,GRID_HEIGHT):
-#        print('||{}|{}|{}||{}|{}|{}||{}|{}|{}||'.format(*test_array))
