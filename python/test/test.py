@@ -157,16 +157,26 @@ if __name__ == '__main__':
     TEXT_WIDTH = 6
 
     # Build "golden sudoku" puzzle
-    puzzle_input = []
+    # INDEX AS: 0-8
+    # VALUES FROM: 1-9
+    SUDOKU_VALUE = 9
+
+    # Build out a reference array of numbers 1-9.
+    reference_array = []
+    for val in range(1,SUDOKU_VALUE+1):
+        reference_array.append(val)
+
+    # Map the reference array to a golden sudoku puzzle.
     offset = 0
-    for n in range (0,9):
-        row = []
+    golden_puzzle = []
+    for n in range(0,9):
         for m in range(0,9):
-                row.append(m)
-        puzzle_input.append(row)
-
-    print(puzzle_input)
-
+            if offset > SUDOKU_VALUE:
+                offset = SUDOKU_VALUE - (SUDOKU_VALUE - offset)
+                print(offset)
+            else
+                offset = offset + sqrt(SUDOKU_VALUE)
+                print(offset)
 
     #for i in range(0,GRID_HEIGHT):
         #print('||{}|{}|{}||{}|{}|{}||{}|{}|{}||'.format(*test_array))
