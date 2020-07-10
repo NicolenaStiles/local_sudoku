@@ -91,6 +91,7 @@ print(name)                             
 '''
 
 import sys
+import math
 
 text_1 = ['   ██  ',
           ' ████  ',
@@ -148,7 +149,7 @@ text_9 = [' █████ ',
 
 if __name__ == '__main__':
 
-    # formatting controls
+    # display constants
     GRID_HEIGHT = 13
     BOX_WIDTH = 4
 
@@ -159,7 +160,8 @@ if __name__ == '__main__':
     # Build "golden sudoku" puzzle
     # INDEX AS: 0-8
     # VALUES FROM: 1-9
-    SUDOKU_VALUE = 9
+    SUDOKU_GRID_SIZE = 3
+    SUDOKU_VALUE = SUDOKU_GRID_SIZE * SUDOKU_GRID_SIZE
 
     # Build out a reference array of numbers 1-9.
     reference_array = []
@@ -169,14 +171,15 @@ if __name__ == '__main__':
     # Map the reference array to a golden sudoku puzzle.
     offset = 0
     golden_puzzle = []
-    for n in range(0,9):
-        for m in range(0,9):
-            if offset > SUDOKU_VALUE:
-                offset = SUDOKU_VALUE - (SUDOKU_VALUE - offset)
-                print(offset)
-            else
-                offset = offset + sqrt(SUDOKU_VALUE)
-                print(offset)
+    for n in range(0,SUDOKU_VALUE):
+        for m in range(0,SUDOKU_VALUE):
+            pass
+        if (n % SUDOKU_GRID_SIZE == 0):
+            offset = (n / SUDOKU_GRID_SIZE)
+            print(offset)
+        else:
+            offset = offset + SUDOKU_GRID_SIZE
+            print(offset)
 
     #for i in range(0,GRID_HEIGHT):
         #print('||{}|{}|{}||{}|{}|{}||{}|{}|{}||'.format(*test_array))
