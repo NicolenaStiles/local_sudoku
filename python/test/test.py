@@ -172,20 +172,28 @@ if __name__ == '__main__':
     offset = 0
     golden_puzzle = []
     for n in range(0,SUDOKU_VALUE):
+        curr_array = []
         for m in range(0,SUDOKU_VALUE):
-            pass
-        if (n % SUDOKU_GRID_SIZE == 0):
-            offset = (n / SUDOKU_GRID_SIZE)
-            print(offset)
-        else:
-            offset = offset + SUDOKU_GRID_SIZE
-            print(offset)
+            curr_array.append(offset)
+            if (offset) >= SUDOKU_VALUE:
+                offset = 0
+            else:
+                offset = offset + 1
+        print(curr_array)
+
+'''
+    if (n % SUDOKU_GRID_SIZE == 0):
+        offset = int(n / SUDOKU_GRID_SIZE)
+    else:
+        offset = offset + SUDOKU_GRID_SIZE
+'''
+
 
     #for i in range(0,GRID_HEIGHT):
         #print('||{}|{}|{}||{}|{}|{}||{}|{}|{}||'.format(*test_array))
 
-    text_array = [text_1,text_2,text_3,text_4,text_5,
-                    text_6, text_7, text_8, text_9]
+    #text_array = [text_1,text_2,text_3,text_4,text_5,
+                    #text_6, text_7, text_8, text_9]
 
     #for nums in range(0,9):
         #print()
