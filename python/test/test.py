@@ -167,27 +167,24 @@ if __name__ == '__main__':
     reference_array = []
     for val in range(1,SUDOKU_VALUE+1):
         reference_array.append(val)
+    print(reference_array)
 
     # Map the reference array to a golden sudoku puzzle.
     offset = 0
-    golden_puzzle = []
+    idx = 0
+    golden_puzzle = [[0 for i in range(SUDOKU_VALUE)] for j in range(SUDOKU_VALUE)]
     for n in range(0,SUDOKU_VALUE):
-        curr_array = []
+        idx = offset
         for m in range(0,SUDOKU_VALUE):
-            curr_array.append(offset)
-            if (offset) >= SUDOKU_VALUE:
-                offset = 0
+            print("{},{}".format(n,idx))
+            if idx <= (SUDOKU_VALUE - 1):
+                idx += 1
             else:
-                offset = offset + 1
-        print(curr_array)
-
-'''
-    if (n % SUDOKU_GRID_SIZE == 0):
-        offset = int(n / SUDOKU_GRID_SIZE)
-    else:
-        offset = offset + SUDOKU_GRID_SIZE
-'''
-
+                idx = 0
+        if offset >= SUDOKU_VALUE:
+            offset = offset - (SUDOKU_VALUE - 1)
+        else:
+            offset += SUDOKU_GRID_SIZE
 
     #for i in range(0,GRID_HEIGHT):
         #print('||{}|{}|{}||{}|{}|{}||{}|{}|{}||'.format(*test_array))
